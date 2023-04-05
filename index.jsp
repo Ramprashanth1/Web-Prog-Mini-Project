@@ -1,33 +1,23 @@
-
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
-  <!DOCTYPE html>
-  <html>
-  <head>
-  <meta charset="ISO-8859-1">
-  <title>Welcome to our Login Page</title>
-  </head>
-  <body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Welcome to our Login Page</title>
+</head>
+<body>
 <%
 try
 {
-  
- Class.forName("oracle.jdbc.OracleDriver");  
- Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","sportsma");  
-//Context initContext = new InitialContext();
-//Context envContext  = (Context)initContext.lookup("java:/comp/env");
-//DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
-//Connection conn = ds.getConnection();
+Class.forName("oracle.jdbc.OracleDriver");  
+Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","sportsma");  
+
 Statement stmt=con.createStatement();  
 ResultSet rs=stmt.executeQuery("select * from flight");  
- 
-                                       
-        
-        
-        
- while(rs.next())  
+
+while(rs.next())  
 out.print(rs.getInt(1)+"  "+rs.getString(2));  
   
 //step5 close the connection object  
@@ -36,7 +26,6 @@ con.close();
 } catch (SQLException e) { 
         
      } 
-
 
 %>
 <%
@@ -48,14 +37,14 @@ out.println("This is jsp and JDBC code");
   <input type="submit" name="submit" value="submit">
   </form>
 
- <% 
-  String sub = request.getParameter("submit");
-  if(sub!=null)
-  {
+<% 
+String sub = request.getParameter("submit");
+if(sub!=null)
+{
     String username = request.getParameter("username");
     out.println("Welcome Mr "+ username);
-  }
-  %>
+}
+%>
 
   <form action="login" method="post">
   <label for="usernamelbl">Enter your Username</label>
