@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<title>Sample servlet</title>
+
+</head>
+<body>
+<form action="Cent" method="GET" >
+<label>Enter the Total Cents You requied
+<input type="text" name="val" /></label>
+<p>Click the below button to calculate the total price</p>
+<input type="submit" value="Submit">
+
+</form>
+<div class="container">
+          <div class="carousel-caption">
+            <h1>Life's Greatest Investement</h1>
+            <p id="show"></p>
+            <p><a class="btn btn-lg btn-primary" href="#" id="learn" onclick="sendinfo()">Learn more</a></p>
+          </div>
+        </div>
+<script>
+      function sendinfo()
+      {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload  = function()
+        {
+          document.getElementById("show").innerHTML = this.responseText;
+        }
+
+        xhttp.open("GET","/templates/WEB-INF/ajax.txt");
+        xhttp.send()
+      }
+    </script>
+</body>
+</html>

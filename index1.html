@@ -1,0 +1,58 @@
+   
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta charset="ISO-8859-1">
+  <title>Welcome to our Login Page</title>
+  </head>
+  <body>
+<% out.print("This is printed from JSP"); %> 
+<form action="index.jsp" method="post">
+  <label for="inputname">Enter your Name</label>
+  <input type="text" name="username" required><br>
+  <input type="submit" name="submit" value="submit">
+  </form>
+
+ <% 
+  String sub = request.getParameter("submit");
+  if(sub!=null)
+  {
+    String username = request.getParameter("username");
+    out.println("Welcome Mr "+ username);
+  }
+  %>
+
+
+  <form action="login" method="post">
+  <label for="usernamelbl">Enter your Username</label>
+  <input type="text" name="username" required><br>
+  <label for="passlbl">Enter your Password</label>
+  <input type="password" name="password" required><br>
+  <input type="submit" name="submit" value="submit">
+  <input type="reset">
+  </form>
+
+<div class="container">
+          <div class="carousel-caption">
+            <h1>Life's Greatest Investement</h1>
+            <p id="show"></p>
+            <p><a class="btn btn-lg btn-primary" href="#" id="learn" onclick="sendinfo()">Learn more</a></p>
+          </div>
+        </div>
+
+<script>
+      function sendinfo()
+      {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload  = function()
+        {
+          document.getElementById("show").innerHTML = this.responseText;
+        }
+
+        xhttp.open("GET","ajax.txt");
+        xhttp.send()
+      }
+    </script>
+  </body>
+  </html>
+
