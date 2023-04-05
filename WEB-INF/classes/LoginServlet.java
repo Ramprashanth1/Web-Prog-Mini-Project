@@ -61,30 +61,61 @@ public class LoginServlet extends HttpServlet {
     response.setContentType("text/html");
     PrintWriter out = response.getWriter();
     String username = request.getParameter("username");
-    String password = request.getParameter("password");
+    String password = request.getParameter("password").toString();
 
-    Class.forName("oracle.jdbc.OracleDriver");
-    Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "sportsma");
+    try {
+      Class.forName("oracle.jdbc.OracleDriver");
+      Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "tiger");
 
-    // Statement stmt=con.Statement();
-    // ResultSet rs=stmt.executeQuery("select * from flight");
+      // Statement stmt = con.createStatement();
+      // ResultSet rs = stmt.executeQuery("select * from users");
+      String sql = "select * from users where u_name = ? and password = ?";
 
-    String sql = "select * from users where u_name = ? and password = ?";
+      PreparedStatement stmt = con.prepareStatement(sql);
+      stmt.setString(1, username);
+      stmt.setString(2, password);
+      ResultSet rs = stmt.executeQuery();
+      // out.print(rs.getInt(1) + " " + rs.getString(2));
+      if (rs.next() == false) {
+        out.println("I doubt you are an hacker.. pls run away");
+      } else {
+        out.println("Welcome Mr " + username + " and your password is " + password);
+      }
 
-    PreparedStatement stmt = con.prepareStatement(sql);
-    stmt.setString(1, username);
-    stmt.setString(2, password);
+      // step5 close the connection object
+      con.close();
 
-    ResultSet rs = stmt.executeQuery();
+    } catch (Exception e) {
 
-    if (rs.next() == false) {
-      out.println("I doubt you are an hacker.. pls run away");
-    } else {
-      out.println("Welcome Mr " + username + " and your password is " + password);
     }
 
-    // while(rs.next())
-    // out.print(rs.getInt(1)+" "+rs.getString(2));
+    // try {
+    // Class.forName("oracle.jdbc.OracleDriver");
+    // Connection con =
+    // DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system",
+    // "sportsma");
+
+    // // Statement stmt=con.Statement();
+    // // ResultSet rs=stmt.executeQuery("select * from flight");
+
+    // String sql = "select * from users where u_name = ? and password = ?";
+
+    // PreparedStatement stmt = con.prepareStatement(sql);
+    // stmt.setString(1, username);
+    // stmt.setString(2, password);
+
+    // ResultSet rs = stmt.executeQuery();
+    // if (rs.next() == false)
+    // out.print(rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
+
+    // if (rs.next() == false) {
+    // out.println("I doubt you are an hacker.. pls run away");
+    // out.println("Welcome Mr " + username + " and your password is " + password);
+    // } else {
+    // }
+    // } catch (Exception e) {
+    // out.println(e);
+    // }
     //
     // step5 close the connection object
     // con.close();
