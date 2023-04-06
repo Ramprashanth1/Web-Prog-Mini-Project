@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>    
-<?xml-stylesheet type = "text/xsl" href = "test.xsl"?>
+
 <note>    
-  <to>sonoojaiswal@javatpoint.com</to>    
-  <from>vimal@javatpoint.com</from>    
-  <body>Hello XML DOM</body>    
+  <to>blog.dev@gmail.com</to>    
+  <from>@blog-dev</from>    
+  <body>github.com/itsjustram/MiniProject</body>    
 </note>    
