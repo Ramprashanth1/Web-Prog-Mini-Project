@@ -1,3 +1,14 @@
-Welcome to our Home page 
-Have a great Day!!
-UNBOUND EXPLORA
+<h2>Front-End Development</h2><br>
+<p>Front-end development focuses on the user-facing side of a website. Front-end developers ensure that visitors can easily interact with and navigate sites by using programming languages, design skills, and other tools. They produce the drop-down menus, layouts, and designs for websites.
+<br>
+Front-end devs use computer programming languages like JavaScript, HyperText Markup Language (HTML), and Cascading Style Sheets (CSS) to design websites. Each language serves a unique purpose. HTML lays out the site's content and structure, CSS adds design features, and JavaScript creates advanced interactive features. Less commonly, front-end devs know other programming languages like Python, PHP, or Ruby.
+</p>
+<br><br>
+<h2>Back-End Development</h2><br>
+<p>
+Back-end developers focus on the server side of websites. They use technical skills to perform the behind-the-scenes work that creates a website's structure and overall functionality, allowing a site's front end to exist. These professionals create a site's operations, databases, and application programming interface (API).
+<br>
+The back end includes an application, server, and database. Computer users often do not see the elements of back-end development, which remain below the hood of a website.
+<br>
+Back-end developers need advanced experience in server-side programming languages like Java, Python, and Ruby to build applications.
+</p>
