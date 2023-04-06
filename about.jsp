@@ -1,9 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
-<%@ page import="java.sql.*" %>
-<%@ page import="java.time.format.DateTimeFormatter" %>
-<%@ page import="java.time.LocalDateTime" %>
-<%! int count=0; %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,11 +45,10 @@ pageEncoding="ISO-8859-1"%>
 
         <div class="menu">
           <ul>
-            <li><a href="/">HOME</a></li>
+            <li><a href="/">HOME</a></li>    
             <li><a href="blog.xml">BLOG</a></li>
             <li><a href="Login.jsp">LOGIN</a></li>
             <li><a href="about.jsp">CONTACT</a></li>
-           
           </ul>
         </div>
 
@@ -84,74 +77,25 @@ pageEncoding="ISO-8859-1"%>
           <a href="#"> <button class="btn">Dark Mode</button></a>
         </div>
       </div>
-      <div class="content">
-        <p class="par">
-
-          <%
-          DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");  
-          LocalDateTime now = LocalDateTime.now();  
-          out.println("Date and Time : "+dtf.format(now)); 
-          %>
-        </p>
-      </div>
+      
       
       <div class="content">
-        <h1>Web Design & <br /><span>Development</span> <br />Course</h1>
+        <h1>Contact<br /><span>Details</span> Course</h1>
         <p class="par">
-          Web design and development is an umbrella term that describes the
-          process of creating a website. <br />
-          Like the name suggests, it involves two major skill sets: web design
-          and web development. <br />
-          Web design determines the look and feel of a website, while web
-          development determines how it functions.
+            <h1>Details</h1>  
+            <div >  
+            <b>Mail:</b> <span id="to"></span><br>  
+            <b>Instaagram:</b> <span id="from"></span><br>  
+            <b>Source Code:</b> <span id="message"></span>  
+            </div> 
+            </div>
+            
         </p>
       </div>
-      <div>
-        <p>Users:</p>
-        <%
-        try
-{
-  
- Class.forName("oracle.jdbc.OracleDriver");  
- Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","tiger");  
-//Context initContext = new InitialContext();
-//Context envContext  = (Context)initContext.lookup("java:/comp/env");
-//DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
-//Connection conn = ds.getConnection();
-Statement stmt=con.createStatement();  
-ResultSet rs=stmt.executeQuery("select * from users");  
- 
-                                          
-        
-        
- while(rs.next()){  
-out.print(rs.getString(1)+"  "+rs.getString(2)+"<br>");  
-  count=count+1;
- }
- out.print("Total Number Of Users : "+count+"<br>");
-//step5 close the connection object  
-con.close();  
-  
-} catch (SQLException e) { 
-        
-     } 
-
-
-%>
+     
       </div>
-      <div class="container">
-        <div class="carousel-caption">
-          <h3>To Learn More, Click Below</h3>
-          <p id="show"></p>
-          <p><a class="btn btn-lg btn-primary" href="#" id="learn" onclick="sendinfo()">Learn more</a></p>
-        </div>
-      </div>
-      <h1>Details</h1>  
-    <div >  
-    <b>Mail:</b> <span id="to"></span><br>  
-    <b>Instaagram:</b> <span id="from"></span><br>  
-    <b>Source Code:</b> <span id="message"></span>  
-    </div> 
+     
+      
     </div>
 	
      

@@ -23,6 +23,6 @@
   <servlet-mapping>     
   <servlet-name>firstservlet</servlet-name>  
   <url-pattern>/login</url-pattern>            
-  </servlet-mapping>  
+  </servlet-mapping>   
  
   </web-app>  

@@ -5,37 +5,55 @@
 <breakfast_menu>
 
 <food>
-<name>Belgian Waffles</name>
-<price>$5.95</price>
-<description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
+<name>XML and XSLT</name>
+<price>W3schools</price>
+<description>XSLT (eXtensible Stylesheet Language Transformations) is the recommended style sheet language for XML.
+
+XSLT is far more sophisticated than CSS. With XSLT you can add/remove elements and attributes to or from the output file. You can also rearrange and sort elements, perform tests and make decisions about which elements to hide and display, and a lot more.
+
+XSLT uses XPath to find information in an XML document.</description>
 <calories>650</calories>
 </food>
 
 <food>
-<name>Strawberry Belgian Waffles</name>
-<price>$7.95</price>
-<description>Light Belgian waffles covered with strawberries and whipped cream</description>
+<name>Ajax</name>
+<price>javaYpoint</price>
+<description>AJAX tutorial covers concepts and examples of AJAX technology for beginners and professionals.
+
+AJAX is an acronym for Asynchronous JavaScript and XML. It is a group of inter-related technologies like JavaScript, DOM, XML, HTML/XHTML, CSS, XMLHttpRequest etc.
+
+AJAX allows you to send and receive data asynchronously without reloading the web page. So it is fast.
+
+AJAX allows you to send only important information to the server not the entire page. So only valuable data from the client side is routed to the server side. It makes your application interactive and faster.</description>
 <calories>900</calories>
 </food>
 
 <food>
-<name>Berry-Berry Belgian Waffles</name>
-<price>$8.95</price>
-<description>Light Belgian waffles covered with an assortment of fresh berries and whipped cream</description>
+<name>What is Java?</name>
+<price>JavaTpoint</price>
+<description>Java is a programming language and a platform. Java is a high level, robust, object-oriented and secure programming language.
+
+Java was developed by Sun Microsystems (which is now the subsidiary of Oracle) in the year 1995. James Gosling is known as the father of Java. Before Java, its name was Oak. Since Oak was already a registered company, so James Gosling and his team changed the name from Oak to Java.
+
+Platform: Any hardware or software environment in which a program runs, is known as a platform. Since Java has a runtime environment (JRE) and API, it is called a platform.</description>
 <calories>900</calories>
 </food>
 
 <food>
-<name>French Toast</name>
-<price>$4.50</price>
-<description>Thick slices made from our homemade sourdough bread</description>
+<name>Learn JavaScript</name>
+<price>WD</price>
+<description>Our JavaScript Tutorial is designed for beginners and professionals both. JavaScript is used to create client-side dynamic pages.
+
+JavaScript is an object-based scripting language which is lightweight and cross-platform.
+
+JavaScript is not a compiled language, but it is a translated language. The JavaScript Translator (embedded in the browser) is responsible for translating the JavaScript code for the web browser.</description>
 <calories>600</calories>
 </food>
 
 <food>
-<name>Homestyle Breakfast</name>
-<price>$6.95</price>
-<description>Two eggs, bacon or sausage, toast, and our ever-popular hash browns</description>
+<name>HTML</name>
+<price>WD</price>
+<description>HTML tutorial or HTML 5 tutorial provides basic and advanced concepts of HTML. Our HTML tutorial is developed for beginners and professionals. In our tutorial, every topic is given step-by-step so that you can learn it in a very easy way. If you are new in learning HTML, then you can learn HTML from basic to a professional level and after learning HTML with CSS and JavaScript you will be able to create your own interactive and dynamic website.</description>
 <calories>950</calories>
 </food>
 
