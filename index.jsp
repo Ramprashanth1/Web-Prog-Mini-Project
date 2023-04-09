@@ -14,14 +14,17 @@ pageEncoding="ISO-8859-1"%>
 try
 {
   
- Class.forName("oracle.jdbc.OracleDriver");  
- Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","sportsma");  
+  Class.forName("com.mysql.jdbc.Driver");
+  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/demo", "root", "sportsma");
+
+ //Class.forName("oracle.jdbc.OracleDriver");  
+ //Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","sportsma");  
 //Context initContext = new InitialContext();
 //Context envContext  = (Context)initContext.lookup("java:/comp/env");
 //DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
 //Connection conn = ds.getConnection();
 Statement stmt=con.createStatement();  
-ResultSet rs=stmt.executeQuery("select * from flight");  
+ResultSet rs=stmt.executeQuery("select * from student");  
  
                                        
         
