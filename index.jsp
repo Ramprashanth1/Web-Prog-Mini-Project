@@ -10,29 +10,7 @@ pageEncoding="ISO-8859-1"%>
   <title>Welcome to our Login Page</title>
   </head>
   <body>
-<%
-try
-{
- Class.forName("oracle.jdbc.driver.OracleDriver");  
- Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe","system","tiger");  
 
-
-Statement stmt=con.createStatement();  
-ResultSet rs=stmt.executeQuery("select * from flight");                                                   
-
- while(rs.next())  
-
-out.print(rs.getInt(1)+"  "+rs.getString(2));  
-  
-//step5 close the connection object  
-con.close();  
-  
-} catch (SQLException e) { 
-        
-     } 
-
-
-%>
 <%
 out.println("This is jsp and JDBC code");
 %>
