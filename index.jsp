@@ -1,7 +1,7 @@
 
 
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ page import="pageNumber.*, java.util.*, java.io.*,yourMemberPackage.Member" %>
 <%@ page import="java.sql.*" %>
   <!DOCTYPE html>
   <html>
@@ -10,6 +10,7 @@ pageEncoding="ISO-8859-1"%>
   <title>Welcome to our Login Page</title>
   </head>
   <body>
+
 
 <%
 out.println("This is jsp and JDBC code");
